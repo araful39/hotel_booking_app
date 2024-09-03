@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hotel_booking_app/utills/constants/images.dart';
+import 'package:hotel_booking_app/view/common_widgets/custom_cache_network.dart';
+import 'package:hotel_booking_app/view/screen/home/widget/hotel_type.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -13,101 +15,24 @@ class Home extends StatelessWidget {
       ),
       body: Column(
         children: [
+          Text("Hotel Type",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SizedBox(
-                width: Get.width*0.3,
-                child: Column(
-                  children: [
-                    Image.asset(
-                      AppImages.fiveStar,
-                      height: 120,
-                      width: 140,
-                      fit: BoxFit.fill,
-                    ),
-                    GestureDetector(
-                      onTap: (){},
-                      child: Container(
-                        // margin: EdgeInsets.only(right: 50),
-                        height: 25,
-                        width: Get.width,
-                        color: Colors.red,
-                        child: Center(
-                            child: Text(
-                          "Five Star",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
-                        )),
-                      ),
-                    ),
-
-                  ],
-                ),
+              HotelTypeCard(
+                imageUrl: AppImages.fiveStar,
+                text: 'Five Star',
+                onPressed: () {},
               ),
-              SizedBox(
-                width: Get.width*0.3,
-                child: Column(
-                  children: [
-                    Image.asset(
-                      AppImages.fiveStar,
-                      height: 120,
-                      width: 140,
-                      fit: BoxFit.fill,
-                    ),
-                    GestureDetector(
-                      onTap: (){},
-                      child: Container(
-                        // margin: EdgeInsets.only(right: 50),
-                        height: 25,
-                        width: Get.width,
-                        color: Colors.red,
-                        child: Center(
-                            child: Text(
-                              "Five Star",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18),
-                            )),
-                      ),
-                    ),
-
-                  ],
-                ),
+              HotelTypeCard(
+                imageUrl: AppImages.fourStar,
+                text: 'Four Star',
+                onPressed: () {},
               ),
-              SizedBox(
-                width: Get.width*0.3,
-                child: Column(
-                  children: [
-                    Image.asset(
-                      AppImages.fiveStar,
-                      height: 120,
-                      width: 140,
-                      fit: BoxFit.fill,
-                    ),
-                    GestureDetector(
-                      onTap: (){},
-                      child: Container(
-                        // margin: EdgeInsets.only(right: 50),
-                        height: 25,
-                        width: Get.width,
-                        color: Colors.red,
-                        child: Center(
-                            child: Text(
-                              "Five Star",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18),
-                            )),
-                      ),
-                    ),
-
-                  ],
-                ),
+              HotelTypeCard(
+                imageUrl: AppImages.treeStar,
+                text: 'Three Star',
+                onPressed: () {},
               ),
             ],
           )
