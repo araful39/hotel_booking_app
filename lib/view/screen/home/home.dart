@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:hotel_booking_app/utills/constants/images.dart';
 
 class Home extends StatelessWidget {
@@ -12,12 +14,12 @@ class Home extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Column(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(
-                width: 140,
-
-                child: Stack(
+                width: Get.width*0.3,
+                child: Column(
                   children: [
                     Image.asset(
                       AppImages.fiveStar,
@@ -25,16 +27,86 @@ class Home extends StatelessWidget {
                       width: 140,
                       fit: BoxFit.fill,
                     ),
-                    Positioned(
-                      bottom: 0,
+                    GestureDetector(
+                      onTap: (){},
                       child: Container(
                         // margin: EdgeInsets.only(right: 50),
                         height: 25,
-                        width: 135,
+                        width: Get.width,
                         color: Colors.red,
-                        child: Center(child: Text("Five Star",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),)),
+                        child: Center(
+                            child: Text(
+                          "Five Star",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        )),
                       ),
-                    )
+                    ),
+
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: Get.width*0.3,
+                child: Column(
+                  children: [
+                    Image.asset(
+                      AppImages.fiveStar,
+                      height: 120,
+                      width: 140,
+                      fit: BoxFit.fill,
+                    ),
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        // margin: EdgeInsets.only(right: 50),
+                        height: 25,
+                        width: Get.width,
+                        color: Colors.red,
+                        child: Center(
+                            child: Text(
+                              "Five Star",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            )),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: Get.width*0.3,
+                child: Column(
+                  children: [
+                    Image.asset(
+                      AppImages.fiveStar,
+                      height: 120,
+                      width: 140,
+                      fit: BoxFit.fill,
+                    ),
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        // margin: EdgeInsets.only(right: 50),
+                        height: 25,
+                        width: Get.width,
+                        color: Colors.red,
+                        child: Center(
+                            child: Text(
+                              "Five Star",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            )),
+                      ),
+                    ),
+
                   ],
                 ),
               ),
