@@ -7,23 +7,28 @@ class CustomCacheNetwork extends StatelessWidget {
   const CustomCacheNetwork({
     super.key,
     required this.imageUrl,
-    this.assetImage, this.height, this.width,
-
+    this.assetImage,
+    this.height,
+    this.width,
   });
   final String imageUrl;
   final String? assetImage;
-final double? height;
-final double? width;
+  final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: height??Get.height*0.12,
-      width: width??Get.width*0.27,
+      height: height ?? Get.height * 0.12,
+      width: width ?? Get.width * 0.27,
       child: CachedNetworkImage(
         imageUrl: imageUrl,
         fit: BoxFit.cover,
-        placeholder: (context, url) => Image.asset(AppIcons.loading,height: 50,width: 50,),
+        placeholder: (context, url) => Image.asset(
+          AppIcons.loading,
+          height: 50,
+          width: 50,
+        ),
         errorWidget: (context, url, error) => Image.asset(
           assetImage ?? AppIcons.alert,
           height: Get.height * 0.1,
